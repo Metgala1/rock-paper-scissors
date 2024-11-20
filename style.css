@@ -1,0 +1,31 @@
+*{
+    outline: 1px solid red;
+}
+.phone{
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+    border-radius: 5px;
+    padding: 10px 10px 5px 10px
+
+
+
+}
+.screen{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.screen div{
+    flex: 1;
+}
+.screen .third .controls{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+}

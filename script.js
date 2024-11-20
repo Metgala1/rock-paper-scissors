@@ -1,0 +1,1 @@
+const playScoreElement = document.querySelector("play-score");
