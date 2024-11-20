@@ -1,6 +1,7 @@
 const humanScoreElement = document.querySelector(".play-score");
 const computerScoreElement = document.querySelector(".computer-score");
 const roundScoreElement = document.querySelector(".rounds");
+const displayElement = document.querySelector(".display")
 
 const rockBtn = document.getElementById("rock-btn");
 const paperBtn = document.getElementById("paper-btn");
@@ -9,7 +10,6 @@ const scissorsBtn = document.getElementById("scissors=btn");
 let playerScore = 0;
 let computerScore = 0;
 let round = 0;
-
 
 
 const getComputerChoice = () => {
@@ -33,20 +33,37 @@ scissorsBtn.addEventListener("click", () => {
     playRound("Scissors")
 })
 
+ const reset = () => {
+    playerScore = 0;
+    computerScore = 0;
+    round = 0
+ }
 const playRound = (button) => {
     const computerSelection = getComputerChoice();
     const playerSelection = getHumanChoice(button)
     if(playerSelection === "Rock" && computerSelection === "Scissors" || playerSelection === "Paper" && computerSelection === "Rock" || playerSelection === "Scissors" && computerSelection === "Paper"){
         playerScore++
         round++
-        console.log("You win", playerScore)
+        displayElement.textContent = `Player Wins! ${playerSelection} beats ${computerSelection}`
     }else if(button === computerSelection){
         round++
-        console.log("It's a tie", playerScore)
+        displayElement.textContent = `It's a tie Player's Option: ${playerSelection} - Conputer's Option${computerSelection}`
     }else{
         computerScore++
         round++
-        console.log("You loss", computerScore)
+        displayElement.textContent = `You loss! ${computerSelection} beats ${playerSelection}`
     }
-    console.log(round)
+    humanScoreElement.textContent = playerScore;
+    computerScoreElement.textContent = computerScore;
+    roundScoreElement.textContent = round;
+    if(playerScore === 5 || computerScore === 5 || round === 5){
+        if(playerScore > computerScore){
+            displayElement.textContent = `Player wins ${playerScore}`
+            reset()
+        }else{
+            displayElement.textContent= `Computer wins ${computerScore}`
+            reset()
+        }
+    }
+
 }

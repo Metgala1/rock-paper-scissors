@@ -18,3 +18,6 @@ I added an eventlistener to the rock paper and scissors but if andy of them are 
 
 step 3: 
 i built a playround function which has a parameter called button. the getHumanChoice alse has a parementer called button. within my playRound function i a have a variable called playerSelection which the value is getHumanchoice with the button as an argument. Remember that if Rock button is click then the value that will be pass to the functions will be rock. this value will be then used in my logic to calculate the winner.
+
+step 4: 
+My interface has player score, computer score and Rounds all set to 0, i have queried them in my script to different variable names the player score is queried to a variable called playerscoreelemt the score changes with respect to the the change in the playerscore in the script.
