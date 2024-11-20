@@ -60,6 +60,10 @@ const playRound = (button) => {
         if(playerScore > computerScore){
             displayElement.textContent = `Player wins ${playerScore}`
             reset()
+        }else if(playerScore === computerScore){
+            displayElement.textContent = `its a tie ${playerScore} : ${computerScore}`
+            reset()
+
         }else{
             displayElement.textContent= `Computer wins ${computerScore}`
             reset()

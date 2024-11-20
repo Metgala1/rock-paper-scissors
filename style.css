@@ -44,6 +44,7 @@
 .option-text{
     text-align: center;
     font-weight: 900;
+
 }
 
 .mid-btn{
@@ -61,7 +62,7 @@ button{
 }
 button:hover{
     background-color: black;
-    color: white
+    color: white;
 }
 .author{
     text-align: center;
