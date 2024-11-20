@@ -51,7 +51,7 @@ const playRound = (button) => {
     }else{
         computerScore++
         round++
-        displayElement.textContent = `You loss! ${computerSelection} beats ${playerSelection}`
+        displayElement.textContent = `You lose! ${computerSelection} beats ${playerSelection}`
     }
     humanScoreElement.textContent = playerScore;
     computerScoreElement.textContent = computerScore;
